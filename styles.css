@@ -1,0 +1,211 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    padding-bottom: 80px;
+}
+
+/* Botones */
+button {
+    background-color: #E50914;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+    padding: 14px 20px;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+button:hover {
+    background-color: #B81F2D;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Lista de Series */
+.c-lista {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 0 10px;
+}
+
+.c-lista-serie {
+    background-color: #1d1d1d;
+    width: calc(45% - 20px);
+    padding: 20px;
+    text-align: center;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-lista-serie img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.c-lista-serie h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.c-lista-serie:hover {
+    transform: scale(1.04);
+}
+
+.c-lista-serie img:hover {
+    transform: rotate(3deg);
+}
+
+/* Navegación */
+.c-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #181818;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    gap: 10px;
+    z-index: 10;
+}
+
+.c-nav-item {
+    width: 22%;
+    background-color: #E50914;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.c-nav-item:hover {
+    background-color: #B81F2D;
+    transform: scale(1.07);
+}
+
+.c-nav-item:active {
+    transform: scale(0.95);
+}
+
+/* Mios */
+.c-unpoke {
+    background-color: #2C3E50;
+    width: calc(25% - 10px);
+    height: 100px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.c-unpoke:hover {
+    transform: scale(1.05);
+}
+
+/* Filtros */
+.filtro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filtro button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filtro button:hover {
+    background-color: #B81F2D;
+    transform: scale(1.05);
+}
+
+/* Estilos para el buscador */
+.c-buscador {
+    width: 100%;
+    max-width: 420px;
+    padding: 14px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid #E50914;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .c-lista-serie {
+        width: calc(90% - 20px);
+    }
+
+    .c-unpoke {
+        width: calc(45% - 10px);
+    }
+
+    .c-nav-item {
+        width: 24%;
+    }
+}
+
+@media (max-width: 480px) {
+    .c-lista-serie {
+        width: 100%;
+    }
+
+    .c-unpoke {
+        width: 100%;
+    }
+
+    .c-nav-item {
+        width: 28%;
+    }
+}
